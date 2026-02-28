@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maestro Africa • car reviews</title>
+  <!-- Tailwind via CDN + a touch of custom inline style for refined automotive feel -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* subtle grain & smooth transitions — all inline spirit but kept in style for brevity */
+    body { background: #faf8f5; }
+    .review-card-hover { transition: all 0.25s ease; }
+    .review-card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 35px -12px rgba(0,40,20,0.25); }
+    .flag-badge { background: linear-gradient(145deg, #006b47 0%, #007f54 100%); }
+    .hero-mask { background: linear-gradient(97deg, rgba(0,30,10,0.92) 10%, rgba(0,60,30,0.6) 70%, rgba(0,0,0,0.2) 100%); }
+  </style>
+</head>
+<body class="font-sans antialiased text-stone-800">
+
+  <!-- entire site uses inline tailwind classes + custom hover effects; no external dependencies except Tailwind -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+
+    <!-- ===== HEADER with african touch ===== -->
+    <header class="flex flex-wrap items-center justify-between border-b border-stone-300/60 pb-5 mb-8">
+      <div class="flex items-center gap-2">
+        <!-- logo / emblem -->
+        <span class="text-4xl" role="img" aria-label="Maestro Africa emblem">🌍⫸</span>
+        <div>
+          <h1 class="text-3xl md:text-4xl font-black tracking-tight text-stone-800">MAESTRO <span class="text-emerald-800">AFRICA</span></h1>
+          <p class="text-xs uppercase tracking-[0.2em] text-stone-500 mt-0.5">expert car reviews • african perspective</p>
+        </div>
+      </div>
+      <!-- inline nav inline styling -->
+      <nav class="flex gap-6 text-sm font-medium text-stone-700">
+        <a href="#" class="hover:text-emerald-800 transition">reviews</a>
+        <a href="#" class="hover:text-emerald-800 transition">news</a>
+        <a href="#" class="hover:text-emerald-800 transition">spots</a>
+        <a href="#" class="hover:text-emerald-800 transition">about</a>
+      </nav>
+    </header>
+
+    <!-- ===== HERO – online car imagery ===== -->
+    <section class="relative rounded-3xl overflow-hidden mb-16 shadow-2xl">
+      <!-- background image: online-sourced car (pexels/unsplash style) inline via tailwind bg -->
+      <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center bg-no-repeat"></div>
+      <div class="absolute inset-0 hero-mask"></div>
+      <div class="relative z-10 py-16 md:py-24 px-8 md:px-16 text-white">
+        <div class="max-w-3xl">
+          <span class="inline-block bg-emerald-700/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-4">🌟 latest road test</span>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Toyota Land Cruiser Prado – <br>Africa‑tough review</h2>
+          <p class="text-lg md:text-xl text-white/90 max-w-2xl mb-6">We push the legendary 4x4 through savannah roads, urban jungle, and red dust. <br class="hidden sm:block">Unbiased, real‑world, from Nairobi to Lagos.</p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-emerald-700 hover:bg-emerald-800 text-white font-semibold px-7 py-3.5 rounded-xl shadow-xl inline-flex items-center gap-2 transition">🎥 watch review</button>
+            <button class="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white font-semibold px-7 py-3.5 rounded-xl inline-flex items-center gap-2 transition">📸 360° gallery</button>
+          </div>
+        </div>
+      </div>
+      <!-- small attribution inline (optional) -->
+      <div class="absolute bottom-3 right-6 z-10 text-white/40 text-xs">📷 online image: Prado / Pexels</div>
+    </section>
+
+    <!-- ===== TODAY'S TOP REVIEWS (CAR PICTURES FROM ONLINE) ===== -->
+    <h3 class="text-3xl font-bold mb-7 flex items-center gap-3"><span class="w-1.5 h-8 bg-emerald-700 rounded-full"></span> fresh reviews <span class="text-stone-400 text-lg font-normal ml-2">• with online car imagery</span></h3>
+
+    <!-- card grid – every image is a placeholder from pexels / unsplash (high‑quality, car related) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr mb-16">
+      
+      <!-- 1. Ford Ranger review card -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1088622/pexels-photo-1088622.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ford Ranger, bakkie, African terrain" loading="lazy">
+          <span class="absolute top-3 left-3 flag-badge text-white text-xs font-bold px-3 py-1.5 rounded-full">🇿🇦 SA review</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">pickup • 2025</span>
+            <span class="text-amber-500 text-sm flex">★★★★★ <span class="text-stone-300">★</span></span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Ford Ranger Wildtrak X</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">We test the new V6 diesel on the roads of Mpumalanga. Towing, comfort and dust‑proofing.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+
+      <!-- 2. BMW iX (electric SUV) -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/11667509/pexels-photo-11667509.jpeg?auto=compress&cs=tinysrgb&w=600" alt="BMW iX electric luxury" loading="lazy">
+          <span class="absolute top-3 left-3 bg-indigo-800 text-white text-xs font-bold px-3 py-1.5 rounded-full">⚡ ev special</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">electric • 2025</span>
+            <span class="text-amber-500 text-sm flex">★★★★☆</span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">BMW iX xDrive50</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">Range anxiety? We drove from Nairobi to Naivasha and back on one charge. Real‑world data inside.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+
+      <!-- 3. Toyota Corolla Cross (hybrid) popular in Africa -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/235658/pexels-photo-235658.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Toyota Corolla Cross hybrid" loading="lazy">
+          <span class="absolute top-3 left-3 flag-badge text-white text-xs font-bold px-3 py-1.5 rounded-full">🇳🇬 lagos tested</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">hybrid crossover</span>
+            <span class="text-amber-500 text-sm flex">★★★★★</span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Toyota Corolla Cross</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">Fuel economy in terrible traffic? We averaged 4.2L/100km in Accra. plus ground clearance test.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+
+      <!-- 4. Volkswagen Amarok (new gen) -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/627681/pexels-photo-627681.jpeg?auto=compress&cs=tinysrgb&w=600" alt="VW Amarok pick up" loading="lazy">
+          <span class="absolute top-3 left-3 bg-amber-700 text-white text-xs font-bold px-3 py-1.5 rounded-full">🏜️ desert spec</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">pickup • 2025</span>
+            <span class="text-amber-500 text-sm flex">★★★★☆</span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">VW Amarok Pan‑Africa</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">How does the new Amarok handle potholes, dust and high speeds on Namibian gravel? We found out.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+
+      <!-- 5. Suzuki Jimny (beloved in Africa) -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/112446/pexels-photo-112446.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Suzuki Jimny 4x4 small" loading="lazy">
+          <span class="absolute top-3 left-3 flag-badge text-white text-xs font-bold px-3 py-1.5 rounded-full">🇲🇦 morocco</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">off‑road mini</span>
+            <span class="text-amber-500 text-sm flex">★★★★★</span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Suzuki Jimny 5‑door</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">Still a go-anywhere gem? We crawled through Atlas mountains – practicality score inside.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+
+      <!-- 6. Mercedes GLE (used by execs) -->
+      <div class="bg-white rounded-2xl shadow-md border border-stone-200/80 overflow-hidden review-card-hover flex flex-col">
+        <div class="h-52 bg-stone-200 relative">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mercedes GLE luxury SUV" loading="lazy">
+          <span class="absolute top-3 left-3 bg-stone-800 text-white text-xs font-bold px-3 py-1.5 rounded-full">🇪🇬 cairo</span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">luxury suv</span>
+            <span class="text-amber-500 text-sm flex">★★★★☆</span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Mercedes GLE 450</h4>
+          <p class="text-stone-600 text-sm mb-4 flex-1">Does the air suspension survive rural speed bumps? We drove from Cairo to Alexandria.</p>
+          <a href="#" class="inline-flex items-center text-emerald-700 font-medium text-sm group">read full review →<span class="group-hover:translate-x-1 transition"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SECONDARY CAR PICTURE STRIP (online imagery) + quick note ===== -->
+    <div class="relative rounded-3xl overflow-hidden mb-16 bg-stone-900 text-white">
+      <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center opacity-30"></div>
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-6">
+        <div>
+          <h3 class="text-3xl font-bold mb-2">📸 online car photography</h3>
+          <p class="text-stone-300 max-w-xl">Every image on Maestro Africa is sourced from real online archives — we bring you the clearest views from the continent and beyond.</p>
+        </div>
+        <div class="flex gap-3">
+          <span class="inline-block bg-black/40 border border-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold">🏞️ 200+ hi-res pics</span>
+          <span class="inline-block bg-emerald-700/80 px-6 py-3 rounded-full text-sm font-semibold">view gallery →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== REVIEW HIGHLIGHT / BLOG SNIPPET ===== -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+      <div class="lg:col-span-2 bg-white p-7 rounded-2xl border border-stone-200 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
+        <div class="w-32 h-32 rounded-xl overflow-hidden shrink-0 shadow-md">
+          <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=400" alt="dashboard details">
+        </div>
+        <div>
+          <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider">long‑term test</span>
+          <h4 class="text-2xl font-bold mb-2">Nissan Navara: 20,000 km across Africa</h4>
+          <p class="text-stone-600">We put the Navara through the ultimate test: from the sahara dunes to tropical monsoon. Reliability, rust spots, and dealer network deep dive. Full report with 34 online pictures.</p>
+          <button class="mt-4 text-emerald-700 font-semibold inline-flex items-center text-sm">read the full story →</button>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white p-7 rounded-2xl shadow-lg flex flex-col">
+        <span class="text-4xl mb-3">🗣️</span>
+        <h5 class="text-xl font-bold mb-2">community review</h5>
+        <p class="text-emerald-100 text-sm leading-relaxed flex-1">“I used Maestro Africa to choose my Hilux. The detailed online pics and local reviews made all the difference.” – <strong>Amina, Nairobi</strong></p>
+        <div class="mt-5 flex gap-1 text-amber-300 text-sm">★★★★★</div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-stone-300/50 pt-10 pb-8 text-stone-600 text-sm flex flex-wrap justify-between gap-6">
+      <div class="flex flex-col gap-2">
+        <span class="text-lg font-bold text-stone-800 tracking-tight">MAESTRO AFRICA</span>
+        <p class="max-w-xs text-stone-500">car reviews • online imagery • honest african road testing since 2018.</p>
+      </div>
+      <div class="flex gap-16 flex-wrap">
+        <div class="flex flex-col gap-1.5">
+          <span class="font-semibold text-stone-800">reviews</span>
+          <a href="#" class="hover:text-emerald-800 transition">SUVs</a>
+          <a href="#" class="hover:text-emerald-800 transition">pickups</a>
+          <a href="#" class="hover:text-emerald-800 transition">sedans</a>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <span class="font-semibold text-stone-800">online pics</span>
+          <a href="#" class="hover:text-emerald-800 transition">gallery</a>
+          <a href="#" class="hover:text-emerald-800 transition">instagram</a>
+          <a href="#" class="hover:text-emerald-800 transition">submit car</a>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <span class="font-semibold text-stone-800">contact</span>
+          <a href="#" class="hover:text-emerald-800 transition">info@maestroafrica.cars</a>
+          <a href="#" class="hover:text-emerald-800 transition">@maestroafrica</a>
+        </div>
+      </div>
+    </footer>
+    <div class="text-center text-stone-400 text-xs py-5 border-t border-stone-200/60 mt-8">© 2025 Maestro Africa — all car images from online sources (Pexels, Unsplash). real reviews, real african roads.</div>
+  </div>
+  <!-- end container -->
+</body>
+</html>
